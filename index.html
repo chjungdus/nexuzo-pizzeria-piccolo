@@ -17,12 +17,14 @@
     <a href="#top" class="logo">Piccolo</a>
     <nav class="main-nav" id="mainNav">
       <a href="#speisekarte">Speisekarte</a>
+      <a href="#mittagsangebot">Mittagsangebot</a>
+      <a href="#konfigurator">Pizza bauen</a>
       <a href="#ueber-uns">Über uns</a>
       <a href="#galerie">Galerie</a>
-      <a href="#faq">FAQ</a>
+      <a href="#reservierung">Reservierung</a>
       <a href="#kontakt">Kontakt</a>
     </nav>
-    <a href="#kontakt" class="btn btn-primary nav-cta">Jetzt bestellen</a>
+    <a href="#reservierung" class="btn btn-primary nav-cta">Tisch reservieren</a>
     <button class="nav-toggle" id="navToggle" aria-label="Menü öffnen" aria-expanded="false">
       <span></span><span></span><span></span>
     </button>
@@ -31,6 +33,7 @@
 
 <main>
 
+  <!-- HERO -->
   <section class="hero">
     <!-- BILD ERSETZEN: Foto vom gemütlichen Innenraum mit Backsteinwand und Holztischen (Empfehlung: 1920x1200px) -->
     <img class="hero-bg" src="images/hero.jpg" alt="Gemütlicher Innenraum der Pizzeria Piccolo" onerror="this.parentElement.classList.add('img-fallback')">
@@ -50,6 +53,7 @@
     </div>
   </section>
 
+  <!-- USP BAR -->
   <section class="usp-bar animate">
     <div class="usp-inner">
       <div class="usp-item">
@@ -67,15 +71,35 @@
     </div>
   </section>
 
+  <!-- FULL-BLEED QUOTE BAND -->
+  <section class="quote-band">
+    <div class="quote-band-inner animate">
+      <span class="quote-deco-bg" aria-hidden="true">Piccolo</span>
+      <p class="quote-band-text">Echte Pizza.<br>Echter Geschmack.<br>Echter Holzofen.</p>
+      <a href="#speisekarte" class="btn btn-outline-invert">Speisekarte entdecken</a>
+    </div>
+  </section>
+
+  <!-- DIAGONAL DIVIDER (into cream) -->
+  <div class="diagonal-top" aria-hidden="true"></div>
+
+  <!-- SPEISEKARTE mit Tab-Switcher -->
   <section class="section" id="speisekarte">
     <div class="section-head animate">
       <p class="eyebrow">Speisekarte</p>
-      <h2>Unsere Klassiker</h2>
-      <p class="section-lede">Eine Auswahl unserer Pizzen — die vollständige Karte gibt es vor Ort oder telefonisch.</p>
+      <h2>Unsere Küche</h2>
+      <p class="section-lede">Wähle eine Kategorie und entdecke unsere Klassiker — die vollständige Karte gibt es vor Ort oder telefonisch.</p>
     </div>
 
-    <div class="menu-category animate">
-      <h3 class="menu-category-title">Pizza Classica</h3>
+    <div class="menu-tabs animate">
+      <button class="menu-tab active" data-tab="classica">Pizza Classica</button>
+      <button class="menu-tab" data-tab="speciale">Pizza Speciale</button>
+      <button class="menu-tab" data-tab="antipasti">Antipasti</button>
+      <button class="menu-tab" data-tab="dolci">Dolci</button>
+      <button class="menu-tab" data-tab="getraenke">Getränke</button>
+    </div>
+
+    <div class="menu-tab-content active" id="tab-classica">
       <div class="menu-grid menu-grid-visible">
         <div class="menu-item menu-item-featured">
           <span class="star-badge" aria-hidden="true"><span class="star-badge-text">Beliebteste<br>Pizza</span></span>
@@ -90,11 +114,22 @@
           <div class="menu-item-head"><span>Prosciutto</span><span class="menu-price">9,00 €</span></div>
           <p>Tomate, Mozzarella, Kochschinken</p>
         </div>
+        <div class="menu-item">
+          <div class="menu-item-head"><span>Funghi</span><span class="menu-price">8,50 €</span></div>
+          <p>Tomate, Mozzarella, Champignons</p>
+        </div>
+        <div class="menu-item">
+          <div class="menu-item-head"><span>Napoli</span><span class="menu-price">8,50 €</span></div>
+          <p>Tomate, Mozzarella, Anchovis, Kapern</p>
+        </div>
+        <div class="menu-item">
+          <div class="menu-item-head"><span>Tonno</span><span class="menu-price">9,00 €</span></div>
+          <p>Tomate, Mozzarella, Thunfisch, rote Zwiebeln</p>
+        </div>
       </div>
     </div>
 
-    <div class="menu-category animate">
-      <h3 class="menu-category-title">Pizza Speciale</h3>
+    <div class="menu-tab-content" id="tab-speciale">
       <div class="menu-grid">
         <div class="menu-item">
           <div class="menu-item-head"><span>Quattro Formaggi</span><span class="menu-price">9,50 €</span></div>
@@ -108,11 +143,18 @@
           <div class="menu-item-head"><span>Piccolo Speciale</span><span class="menu-price">10,50 €</span></div>
           <p>Hausmischung mit wechselndem Belag der Saison</p>
         </div>
+        <div class="menu-item">
+          <div class="menu-item-head"><span>Rucola e Burrata</span><span class="menu-price">11,00 €</span></div>
+          <p>Tomate, Rucola, Burrata, Olivenöl, Balsamico</p>
+        </div>
+        <div class="menu-item">
+          <div class="menu-item-head"><span>Tartufo</span><span class="menu-price">12,00 €</span></div>
+          <p>Crème blanche, Mozzarella, Trüffelöl, Parmesan</p>
+        </div>
       </div>
     </div>
 
-    <div class="menu-category animate">
-      <h3 class="menu-category-title">Antipasti</h3>
+    <div class="menu-tab-content" id="tab-antipasti">
       <div class="menu-grid">
         <div class="menu-item">
           <div class="menu-item-head"><span>Bruschetta al Pomodoro</span><span class="menu-price">5,50 €</span></div>
@@ -122,11 +164,14 @@
           <div class="menu-item-head"><span>Antipasti-Teller</span><span class="menu-price">8,00 €</span></div>
           <p>Kleine Auswahl italienischer Vorspeisen</p>
         </div>
+        <div class="menu-item">
+          <div class="menu-item-head"><span>Insalata Mista</span><span class="menu-price">6,00 €</span></div>
+          <p>Gemischter Salat mit Hausdressing</p>
+        </div>
       </div>
     </div>
 
-    <div class="menu-category animate">
-      <h3 class="menu-category-title">Dolci</h3>
+    <div class="menu-tab-content" id="tab-dolci">
       <div class="menu-grid">
         <div class="menu-item">
           <div class="menu-item-head"><span>Tiramisù</span><span class="menu-price">4,00 €</span></div>
@@ -136,11 +181,14 @@
           <div class="menu-item-head"><span>Panna Cotta</span><span class="menu-price">3,80 €</span></div>
           <p>Mit Fruchtsauce der Saison</p>
         </div>
+        <div class="menu-item">
+          <div class="menu-item-head"><span>Gelato al Pistacchio</span><span class="menu-price">3,50 €</span></div>
+          <p>Zwei Kugeln Pistazieneis</p>
+        </div>
       </div>
     </div>
 
-    <div class="menu-category animate">
-      <h3 class="menu-category-title">Getränke</h3>
+    <div class="menu-tab-content" id="tab-getraenke">
       <div class="menu-grid">
         <div class="menu-item">
           <div class="menu-item-head"><span>Acqua Naturale / Frizzante</span><span class="menu-price">3,00 €</span></div>
@@ -154,12 +202,22 @@
           <div class="menu-item-head"><span>Hauswein</span><span class="menu-price">5,50 €</span></div>
           <p>Rot oder weiß, 0,2 l</p>
         </div>
+        <div class="menu-item">
+          <div class="menu-item-head"><span>Birra Italiana</span><span class="menu-price">4,00 €</span></div>
+          <p>Peroni oder Moretti, 0,33 l</p>
+        </div>
+        <div class="menu-item">
+          <div class="menu-item-head"><span>Espresso</span><span class="menu-price">2,20 €</span></div>
+          <p>Klassischer Espresso</p>
+        </div>
       </div>
     </div>
   </section>
 
+  <!-- TORN DIVIDER -->
   <div class="torn-divider animate" aria-hidden="true"></div>
 
+  <!-- ORDER STEPS -->
   <section class="order-steps">
     <div class="order-steps-inner animate">
       <p class="eyebrow eyebrow-invert">So einfach geht's</p>
@@ -184,22 +242,124 @@
     </div>
   </section>
 
-  <section class="section split" id="ueber-uns">
-    <div class="split-text animate-left">
-      <p class="eyebrow">Über uns</p>
-      <h2>Handgemacht, mit Herz</h2>
-      <p>Die Pizzeria Piccolo liegt an der Friedrichstraße, mitten in der Friedrichstadt. Zwischen Backsteinwand und Holztischen entsteht bei uns eine Atmosphäre, in der man sich schnell zuhause fühlt — egal ob auf einen schnellen Teller oder einen langen Abend mit Freunden.</p>
-      <p>Wir setzen auf frische Zutaten, handgeformten Teig und eine Küche, die keine Abkürzungen nimmt. Der Teig braucht bei uns seine Zeit zum Reifen, bevor er im Ofen landet — das schmeckt man, und das sagen auch unsere Gäste.</p>
-      <p>Bei uns ist jede und jeder willkommen: Wir sind ausdrücklich LGBTQ+-freundlich und freuen uns über jeden neuen Stammgast.</p>
-      <p>Ob kurzer Mittagsteller zwischendurch oder ein Abend, der sich Zeit nimmt — bei uns ist beides willkommen. Wir freuen uns, wenn aus einem ersten Besuch bei uns ein regelmäßiger wird.</p>
-      <a href="#galerie" class="link-arrow">Einblicke in die Pizzeria →</a>
-    </div>
-    <div class="split-media animate-right">
-      <!-- BILD ERSETZEN: Foto vom Innenraum, Backsteinwand mit Holztischen (Empfehlung: 1200x900px) -->
-      <img src="images/gallery-1.jpg" alt="Backsteinwand mit Holztischen in der Pizzeria Piccolo" loading="lazy" onerror="this.parentElement.classList.add('img-fallback')">
+  <!-- PARALLAX-SEKTION "AUS UNSEREM OFEN" -->
+  <section class="ofen-parallax" id="ofen">
+    <!-- BILD ERSETZEN: Foto eines Holzofens mit Flammen, dunkel (Empfehlung: 1920x900px) -->
+    <div class="ofen-parallax-bg"></div>
+    <div class="ofen-parallax-overlay"></div>
+    <div class="ofen-parallax-content animate">
+      <p class="eyebrow eyebrow-invert">Aus unserem Ofen</p>
+      <h2>Der Ofen macht den Unterschied</h2>
+      <p>Kein Elektroofen, kein Durchlauferhitzer. Jede Pizza wandert in einen echten Holzofen — die Hitze gibt den knusprigen Boden und das leichte Raucharoma, das man aus Neapel kennt.</p>
+      <div class="ofen-progress-wrap" id="ofenProgress">
+        <div class="ofen-progress-bar">
+          <div class="ofen-progress-fill" id="ofenFill"></div>
+        </div>
+        <p class="ofen-progress-label" id="ofenLabel">Im Ofen...</p>
+      </div>
     </div>
   </section>
 
+  <!-- MITTAGSANGEBOT + COUNTDOWN -->
+  <section class="section mittagsangebot-section" id="mittagsangebot">
+    <div class="mittagsangebot-inner">
+      <div class="mittagsangebot-text animate-left">
+        <p class="eyebrow">Mittagsangebot</p>
+        <h2>Täglich bis 14:30 Uhr</h2>
+        <p>Pizza, Salat und ein Getränk — unser Mittagsmenü für alle, die sich in der Pause etwas Echtes gönnen wollen.</p>
+        <ul class="mittagsangebot-list">
+          <li>Pizza nach Wahl (Classica)</li>
+          <li>Insalata Mista</li>
+          <li>Softdrink oder Wasser (0,33 l)</li>
+        </ul>
+        <p class="mittagsangebot-price"><strong>12,50 €</strong> pro Person</p>
+        <a href="tel:+492113119004" class="btn btn-primary">Jetzt anrufen</a>
+      </div>
+      <div class="mittagsangebot-countdown animate-right">
+        <p class="countdown-label">Angebot endet in</p>
+        <div class="countdown-display">
+          <div class="countdown-block">
+            <span class="countdown-num" id="cdHours">--</span>
+            <span class="countdown-unit">Std</span>
+          </div>
+          <div class="countdown-sep">:</div>
+          <div class="countdown-block">
+            <span class="countdown-num" id="cdMinutes">--</span>
+            <span class="countdown-unit">Min</span>
+          </div>
+          <div class="countdown-sep">:</div>
+          <div class="countdown-block">
+            <span class="countdown-num" id="cdSeconds">--</span>
+            <span class="countdown-unit">Sek</span>
+          </div>
+        </div>
+        <p class="countdown-note" id="countdownNote"></p>
+      </div>
+    </div>
+  </section>
+
+  <!-- CHECKERBOARD FEATURES -->
+  <section class="section features-section" id="ueber-uns">
+    <div class="section-head animate">
+      <p class="eyebrow">Über uns</p>
+      <h2>Handgemacht, mit Herz</h2>
+      <p class="section-lede">Wir sind eine Trattoria in der Friedrichstadt — kein Fast-Food-Laden, kein Kettenrestaurant.</p>
+    </div>
+
+    <div class="feature-row feature-row-normal animate">
+      <div class="feature-media">
+        <!-- BILD ERSETZEN: Foto des Teigformens von Hand (Empfehlung: 800x600px) -->
+        <img src="images/feature-1.jpg" alt="Handgemachter Pizzateig bei Piccolo" loading="lazy" onerror="this.parentElement.classList.add('img-fallback')">
+      </div>
+      <div class="feature-text">
+        <span class="feature-num" aria-hidden="true">01</span>
+        <h3>Handgeformter Teig</h3>
+        <p>Unser Teig braucht Zeit — mindestens 24 Stunden Reifezeit, damit er diese charakteristische Leichtigkeit bekommt. Kein Fertigmix, kein Kompromiss.</p>
+        <p>Der Unterschied liegt nicht nur in der Soße oder dem Belag: Ein guter Boden ist die Basis für alles andere.</p>
+      </div>
+    </div>
+
+    <div class="feature-row feature-row-reverse animate">
+      <div class="feature-media">
+        <!-- BILD ERSETZEN: Foto frischer Zutaten (Tomaten, Basilikum, Käse) (Empfehlung: 800x600px) -->
+        <img src="images/feature-2.jpg" alt="Frische Zutaten bei Pizzeria Piccolo" loading="lazy" onerror="this.parentElement.classList.add('img-fallback')">
+      </div>
+      <div class="feature-text">
+        <span class="feature-num" aria-hidden="true">02</span>
+        <h3>Frische Zutaten</h3>
+        <p>Ob Tomatensugo, Mozzarella oder Rucola — wir wählen Zutaten sorgfältig aus. Nicht das Günstigste, sondern das, was schmeckt.</p>
+        <p>Das sieht man auf dem Teller: keine matschige Soße, kein Käse aus der Tüte.</p>
+      </div>
+    </div>
+
+    <div class="feature-row feature-row-normal animate">
+      <div class="feature-media">
+        <!-- BILD ERSETZEN: Foto des gemütlichen Innenraums mit Backsteinwand (Empfehlung: 800x600px) -->
+        <img src="images/feature-3.jpg" alt="Gemütlicher Innenraum der Pizzeria Piccolo" loading="lazy" onerror="this.parentElement.classList.add('img-fallback')">
+      </div>
+      <div class="feature-text">
+        <span class="feature-num" aria-hidden="true">03</span>
+        <h3>Gemütliche Trattoria</h3>
+        <p>Backsteinwand, Holztische, gedämpftes Licht — bei uns darf man sich Zeit nehmen. Ob kurze Mittagspause oder langer Abend mit Freunden, beides ist willkommen.</p>
+        <p>Bei uns ist jede und jeder willkommen: Wir sind ausdrücklich LGBTQ+-freundlich.</p>
+      </div>
+    </div>
+
+    <div class="feature-row feature-row-reverse animate">
+      <div class="feature-media">
+        <!-- BILD ERSETZEN: Foto des Holzofens mit lodernden Flammen (Empfehlung: 800x600px) -->
+        <img src="images/feature-4.jpg" alt="Holzofen in der Pizzeria Piccolo" loading="lazy" onerror="this.parentElement.classList.add('img-fallback')">
+      </div>
+      <div class="feature-text">
+        <span class="feature-num" aria-hidden="true">04</span>
+        <h3>Echter Holzofen</h3>
+        <p>Der Holzofen ist keine Dekoration — er ist das Herzstück unserer Küche. Die hohe Temperatur gibt jedem Boden seinen knusprigen Charakter.</p>
+        <p>Das ist der Unterschied, den man schmeckt: nicht erklärt, sondern erlebt.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- WHY GRID -->
   <section class="section why-section">
     <div class="section-head center animate">
       <p class="eyebrow">Warum Piccolo</p>
@@ -237,31 +397,197 @@
     </div>
   </section>
 
+  <!-- PIZZA KONFIGURATOR -->
+  <section class="section konfigurator-section" id="konfigurator">
+    <div class="big-typo-deco" aria-hidden="true">Pizza</div>
+    <div class="section-head animate">
+      <p class="eyebrow">Deine Pizza, dein Rezept</p>
+      <h2>Bau deine Wunschpizza</h2>
+      <p class="section-lede">Wähle Teig, Soße, Käse und Beläge — wir zeigen dir deine Kreation und den Preis live.</p>
+    </div>
+
+    <div class="konfigurator-wrap animate-scale">
+      <div class="konfigurator-form">
+
+        <div class="konfig-group">
+          <h3 class="konfig-label">1. Teig wählen</h3>
+          <div class="konfig-options">
+            <label class="konfig-option">
+              <input type="radio" name="teig" value="Dünn" data-price="0">
+              <span class="konfig-option-inner">
+                <span class="konfig-option-name">Dünn</span>
+                <span class="konfig-option-desc">Knusprig &amp; leicht</span>
+              </span>
+            </label>
+            <label class="konfig-option">
+              <input type="radio" name="teig" value="Normal" data-price="0" checked>
+              <span class="konfig-option-inner">
+                <span class="konfig-option-name">Normal</span>
+                <span class="konfig-option-desc">Der Klassiker</span>
+              </span>
+            </label>
+            <label class="konfig-option">
+              <input type="radio" name="teig" value="Dicke" data-price="0.50">
+              <span class="konfig-option-inner">
+                <span class="konfig-option-name">Dicker</span>
+                <span class="konfig-option-desc">Saftig &amp; weich<br><span class="konfig-surcharge">+0,50 €</span></span>
+              </span>
+            </label>
+          </div>
+        </div>
+
+        <div class="konfig-group">
+          <h3 class="konfig-label">2. Soße wählen</h3>
+          <div class="konfig-options">
+            <label class="konfig-option">
+              <input type="radio" name="sosse" value="Tomatensoße" data-price="0" checked>
+              <span class="konfig-option-inner">
+                <span class="konfig-option-name">Tomatensoße</span>
+                <span class="konfig-option-desc">Frisch, säuerlich</span>
+              </span>
+            </label>
+            <label class="konfig-option">
+              <input type="radio" name="sosse" value="Pesto" data-price="1.00">
+              <span class="konfig-option-inner">
+                <span class="konfig-option-name">Pesto</span>
+                <span class="konfig-option-desc">Basilikum-Pesto<br><span class="konfig-surcharge">+1,00 €</span></span>
+              </span>
+            </label>
+            <label class="konfig-option">
+              <input type="radio" name="sosse" value="Crème blanche" data-price="1.00">
+              <span class="konfig-option-inner">
+                <span class="konfig-option-name">Crème blanche</span>
+                <span class="konfig-option-desc">Weiße Soße<br><span class="konfig-surcharge">+1,00 €</span></span>
+              </span>
+            </label>
+          </div>
+        </div>
+
+        <div class="konfig-group">
+          <h3 class="konfig-label">3. Käse wählen</h3>
+          <div class="konfig-options">
+            <label class="konfig-option">
+              <input type="radio" name="kaese" value="Mozzarella" data-price="0" checked>
+              <span class="konfig-option-inner">
+                <span class="konfig-option-name">Mozzarella</span>
+                <span class="konfig-option-desc">Der Klassiker</span>
+              </span>
+            </label>
+            <label class="konfig-option">
+              <input type="radio" name="kaese" value="Grana Padano" data-price="1.50">
+              <span class="konfig-option-inner">
+                <span class="konfig-option-name">Grana Padano</span>
+                <span class="konfig-option-desc">Würziger Hartkäse<br><span class="konfig-surcharge">+1,50 €</span></span>
+              </span>
+            </label>
+          </div>
+        </div>
+
+        <div class="konfig-group">
+          <h3 class="konfig-label">4. Beläge wählen</h3>
+          <div class="konfig-options konfig-options-check">
+            <label class="konfig-check">
+              <input type="checkbox" name="belag" value="Schinken" data-price="1.50">
+              <span class="konfig-check-inner"><span>Schinken</span><span class="konfig-surcharge">+1,50 €</span></span>
+            </label>
+            <label class="konfig-check">
+              <input type="checkbox" name="belag" value="Salami" data-price="1.50">
+              <span class="konfig-check-inner"><span>Salami</span><span class="konfig-surcharge">+1,50 €</span></span>
+            </label>
+            <label class="konfig-check">
+              <input type="checkbox" name="belag" value="Champignons" data-price="1.00">
+              <span class="konfig-check-inner"><span>Champignons</span><span class="konfig-surcharge">+1,00 €</span></span>
+            </label>
+            <label class="konfig-check">
+              <input type="checkbox" name="belag" value="Rucola" data-price="1.00">
+              <span class="konfig-check-inner"><span>Rucola</span><span class="konfig-surcharge">+1,00 €</span></span>
+            </label>
+            <label class="konfig-check">
+              <input type="checkbox" name="belag" value="Burrata" data-price="2.50">
+              <span class="konfig-check-inner"><span>Burrata</span><span class="konfig-surcharge">+2,50 €</span></span>
+            </label>
+          </div>
+        </div>
+
+      </div><!-- /konfigurator-form -->
+
+      <div class="konfigurator-preview">
+        <!-- Visuelle Pizza-Darstellung -->
+        <div class="konfig-pizza-visual" aria-hidden="true">
+          <div class="konfig-pizza-base">
+            <div class="konfig-pizza-sauce" id="kps"></div>
+            <div class="konfig-pizza-toppings" id="kpt"></div>
+          </div>
+        </div>
+        <div class="konfig-summary">
+          <h3>Deine Pizza</h3>
+          <div class="konfig-summary-row"><span>Teig</span><span id="sum-teig">Normal</span></div>
+          <div class="konfig-summary-row"><span>Soße</span><span id="sum-sosse">Tomatensoße</span></div>
+          <div class="konfig-summary-row"><span>Käse</span><span id="sum-kaese">Mozzarella</span></div>
+          <div class="konfig-summary-row"><span>Beläge</span><span id="sum-belag">Keine</span></div>
+          <div class="konfig-summary-total">
+            <span>Gesamtpreis</span>
+            <span id="sum-total">7,50 €</span>
+          </div>
+          <a href="tel:+492113119004" class="btn btn-primary" style="width:100%;text-align:center;margin-top:20px;display:block;">Jetzt bestellen</a>
+          <p class="konfig-note">Ruf uns einfach an — wir freuen uns auf deine Bestellung.</p>
+        </div>
+      </div>
+    </div><!-- /konfigurator-wrap -->
+  </section>
+
+  <!-- LIGHTBOX GALERIE -->
   <section class="section" id="galerie">
     <div class="section-head animate">
       <p class="eyebrow">Galerie</p>
       <h2>Ein Blick ins Piccolo</h2>
     </div>
     <div class="gallery-grid animate">
-      <div class="gallery-item gallery-item-round">
-        <!-- BILD ERSETZEN: Foto einer Pizza, rund zugeschnitten -->
+      <div class="gallery-item gallery-item-round gallery-lb" data-src="images/gallery-1.jpg" data-caption="Frisch gebackene Pizza bei Pizzeria Piccolo" tabindex="0" role="button" aria-label="Bild vergrößern">
+        <!-- BILD ERSETZEN: Foto einer Pizza, rund zugeschnitten (Empfehlung: 600x600px) -->
         <img src="images/gallery-1.jpg" alt="Frisch gebackene Pizza bei Pizzeria Piccolo" loading="lazy" onerror="this.parentElement.classList.add('img-fallback')">
+        <span class="gallery-zoom" aria-hidden="true">&#x2B;</span>
       </div>
-      <div class="gallery-item">
-        <!-- BILD ERSETZEN: Foto vom Innenraum -->
+      <div class="gallery-item gallery-lb" data-src="images/gallery-2.jpg" data-caption="Innenraum der Pizzeria Piccolo" tabindex="0" role="button" aria-label="Bild vergrößern">
+        <!-- BILD ERSETZEN: Foto vom Innenraum mit Backsteinwand (Empfehlung: 800x600px) -->
         <img src="images/gallery-2.jpg" alt="Innenraum der Pizzeria Piccolo" loading="lazy" onerror="this.parentElement.classList.add('img-fallback')">
+        <span class="gallery-zoom" aria-hidden="true">&#x2B;</span>
       </div>
-      <div class="gallery-item gallery-item-round">
-        <!-- BILD ERSETZEN: Foto von Zutaten oder Ofen, rund zugeschnitten -->
+      <div class="gallery-item gallery-item-round gallery-lb" data-src="images/gallery-3.jpg" data-caption="Zubereitung bei Pizzeria Piccolo" tabindex="0" role="button" aria-label="Bild vergrößern">
+        <!-- BILD ERSETZEN: Foto von Ofen oder Zutaten, rund (Empfehlung: 600x600px) -->
         <img src="images/gallery-3.jpg" alt="Zubereitung bei Pizzeria Piccolo" loading="lazy" onerror="this.parentElement.classList.add('img-fallback')">
+        <span class="gallery-zoom" aria-hidden="true">&#x2B;</span>
       </div>
-      <div class="gallery-item">
-        <!-- BILD ERSETZEN: Foto von Holztischen -->
-        <img src="images/gallery-1.jpg" alt="Sitzbereich der Pizzeria Piccolo" loading="lazy" onerror="this.parentElement.classList.add('img-fallback')">
+      <div class="gallery-item gallery-lb" data-src="images/gallery-4.jpg" data-caption="Sitzbereich der Pizzeria Piccolo" tabindex="0" role="button" aria-label="Bild vergrößern">
+        <!-- BILD ERSETZEN: Foto von Holztischen und Stühlen (Empfehlung: 800x600px) -->
+        <img src="images/gallery-4.jpg" alt="Sitzbereich der Pizzeria Piccolo" loading="lazy" onerror="this.parentElement.classList.add('img-fallback')">
+        <span class="gallery-zoom" aria-hidden="true">&#x2B;</span>
+      </div>
+      <div class="gallery-item gallery-lb" data-src="images/gallery-5.jpg" data-caption="Der Holzofen der Pizzeria Piccolo" tabindex="0" role="button" aria-label="Bild vergrößern">
+        <!-- BILD ERSETZEN: Foto des Holzofens (Empfehlung: 800x600px) -->
+        <img src="images/gallery-5.jpg" alt="Der Holzofen der Pizzeria Piccolo" loading="lazy" onerror="this.parentElement.classList.add('img-fallback')">
+        <span class="gallery-zoom" aria-hidden="true">&#x2B;</span>
+      </div>
+      <div class="gallery-item gallery-item-round gallery-lb" data-src="images/gallery-6.jpg" data-caption="Frische Zutaten bei Piccolo" tabindex="0" role="button" aria-label="Bild vergrößern">
+        <!-- BILD ERSETZEN: Foto frischer Zutaten, rund (Empfehlung: 600x600px) -->
+        <img src="images/gallery-6.jpg" alt="Frische Zutaten bei Piccolo" loading="lazy" onerror="this.parentElement.classList.add('img-fallback')">
+        <span class="gallery-zoom" aria-hidden="true">&#x2B;</span>
       </div>
     </div>
   </section>
 
+  <!-- LIGHTBOX MODAL -->
+  <div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="Galerie-Vollansicht" hidden>
+    <button class="lightbox-close" id="lbClose" aria-label="Schließen">&#x2715;</button>
+    <button class="lightbox-prev" id="lbPrev" aria-label="Vorheriges Bild">&#8592;</button>
+    <button class="lightbox-next" id="lbNext" aria-label="Nächstes Bild">&#8594;</button>
+    <div class="lightbox-inner">
+      <img src="" alt="" id="lbImg">
+      <p class="lightbox-caption" id="lbCap"></p>
+    </div>
+  </div>
+
+  <!-- FAQ -->
   <section class="section faq-section" id="faq">
     <div class="section-head animate">
       <p class="eyebrow">FAQ</p>
@@ -270,7 +596,7 @@
     <div class="faq-list animate">
       <details class="faq-item">
         <summary>Bietet ihr auch Lieferung an?</summary>
-        <p>Ja, laut unserem Profil bieten wir sowohl Lieferung als auch Speisen zum Mitnehmen an — ruf uns gerne für Details an.</p>
+        <p>Ja, wir bieten sowohl Lieferung als auch Speisen zum Mitnehmen an — ruf uns gerne für Details an.</p>
       </details>
       <details class="faq-item">
         <summary>Muss ich reservieren?</summary>
@@ -289,17 +615,14 @@
         <p>Ja, ausdrücklich — wir sind LGBTQ+-freundlich und freuen uns über jeden Gast.</p>
       </details>
       <details class="faq-item">
-        <summary>Bietet ihr auch Getränke an?</summary>
-        <p>Ja, von Wasser über Softdrinks bis Hauswein — schaut gerne in unsere Speisekarte.</p>
-      </details>
-      <details class="faq-item">
         <summary>Welche Zahlungsmöglichkeiten habt ihr?</summary>
         <p>Bei uns sind die gängigen Zahlungsarten möglich. Wenn ihr sichergehen wollt, fragt uns gerne kurz vorab telefonisch.</p>
       </details>
     </div>
   </section>
 
-  <section class="section reviews">
+  <!-- GESTAFFELTE REZENSIONEN -->
+  <section class="section reviews" id="bewertungen">
     <div class="section-head center animate">
       <p class="eyebrow">Bewertungen</p>
       <div class="reviews-score">
@@ -308,22 +631,118 @@
         <span class="score-count">145 Google-Bewertungen</span>
       </div>
     </div>
-    <div class="review-grid animate">
-      <blockquote class="review-card">
-        <p>„Die Pizza schmeckt hausgemacht, der Teig ist genau richtig und die Bedienung ist immer freundlich. Wird bei uns zum Stammlokal.“</p>
+    <div class="review-stagger animate">
+      <blockquote class="review-card review-card-1">
+        <p>„Die Pizza schmeckt hausgemacht, der Teig ist genau richtig und die Bedienung ist immer freundlich. Wird bei uns zum Stammlokal."</p>
         <cite>— Google-Rezension</cite>
       </blockquote>
-      <blockquote class="review-card">
-        <p>„Gemütliche Atmosphäre und ehrliche italienische Küche ohne Schnickschnack.“</p>
+      <blockquote class="review-card review-card-2">
+        <p>„Gemütliche Atmosphäre und ehrliche italienische Küche ohne Schnickschnack."</p>
         <cite>— Google-Rezension</cite>
       </blockquote>
-      <blockquote class="review-card">
-        <p>„Schnelle Lieferung und die Pizza kommt noch heiß an — kann ich nur empfehlen.“</p>
+      <blockquote class="review-card review-card-3">
+        <p>„Schnelle Lieferung und die Pizza kommt noch heiß an — kann ich nur empfehlen."</p>
         <cite>— Google-Rezension</cite>
       </blockquote>
     </div>
   </section>
 
+  <!-- RESERVIERUNGSFORMULAR -->
+  <section class="section reservierung-section" id="reservierung">
+    <div class="reservierung-inner">
+      <div class="reservierung-info animate-left">
+        <p class="eyebrow">Reservierung</p>
+        <h2>Tisch reservieren</h2>
+        <p>Für größere Gruppen oder wenn ihr sicher gehen wollt, dass ihr euren Lieblingsplatz bekommt — einfach hier anfragen oder anrufen.</p>
+        <div class="res-contact-list">
+          <div class="res-contact-item">
+            <span class="res-contact-label">Telefon</span>
+            <a href="tel:+492113119004" class="res-contact-value">+49 211 3119004</a>
+          </div>
+          <div class="res-contact-item">
+            <span class="res-contact-label">Adresse</span>
+            <span class="res-contact-value">Friedrichstraße 124, 40217 Düsseldorf</span>
+          </div>
+          <div class="res-contact-item">
+            <span class="res-contact-label">Öffnungszeiten</span>
+            <span class="res-contact-value">Täglich 12:00 – 22:00 Uhr</span>
+          </div>
+        </div>
+      </div>
+      <div class="reservierung-form-wrap animate-right">
+        <form class="reservierung-form" id="reservierungForm" novalidate>
+          <div class="form-row-2">
+            <div class="form-field">
+              <label for="res-name">Name *</label>
+              <input type="text" id="res-name" name="name" placeholder="Dein Name" autocomplete="name">
+              <span class="form-error" id="err-name"></span>
+            </div>
+            <div class="form-field">
+              <label for="res-telefon">Telefon *</label>
+              <input type="tel" id="res-telefon" name="telefon" placeholder="+49 ..." autocomplete="tel">
+              <span class="form-error" id="err-telefon"></span>
+            </div>
+          </div>
+          <div class="form-row-2">
+            <div class="form-field">
+              <label for="res-datum">Datum *</label>
+              <input type="date" id="res-datum" name="datum">
+              <span class="form-error" id="err-datum"></span>
+            </div>
+            <div class="form-field">
+              <label for="res-uhrzeit">Uhrzeit *</label>
+              <select id="res-uhrzeit" name="uhrzeit">
+                <option value="">Uhrzeit wählen</option>
+                <option value="12:00">12:00 Uhr</option>
+                <option value="12:30">12:30 Uhr</option>
+                <option value="13:00">13:00 Uhr</option>
+                <option value="13:30">13:30 Uhr</option>
+                <option value="14:00">14:00 Uhr</option>
+                <option value="18:00">18:00 Uhr</option>
+                <option value="18:30">18:30 Uhr</option>
+                <option value="19:00">19:00 Uhr</option>
+                <option value="19:30">19:30 Uhr</option>
+                <option value="20:00">20:00 Uhr</option>
+                <option value="20:30">20:30 Uhr</option>
+                <option value="21:00">21:00 Uhr</option>
+              </select>
+              <span class="form-error" id="err-uhrzeit"></span>
+            </div>
+          </div>
+          <div class="form-field">
+            <label for="res-personen">Personenzahl *</label>
+            <select id="res-personen" name="personen">
+              <option value="">Anzahl wählen</option>
+              <option value="1">1 Person</option>
+              <option value="2">2 Personen</option>
+              <option value="3">3 Personen</option>
+              <option value="4">4 Personen</option>
+              <option value="5">5 Personen</option>
+              <option value="6">6 Personen</option>
+              <option value="7+">7 oder mehr</option>
+            </select>
+            <span class="form-error" id="err-personen"></span>
+          </div>
+          <div class="form-field">
+            <label for="res-notiz">Anmerkungen (optional)</label>
+            <textarea id="res-notiz" name="notiz" rows="3" placeholder="z.B. Allergie, Sonderwünsche, Geburtstag..."></textarea>
+          </div>
+          <button type="submit" class="btn btn-primary form-submit-btn">Anfrage absenden</button>
+        </form>
+        <div class="reservierung-success" id="reservierungSuccess" hidden>
+          <div class="success-banner">
+            <svg viewBox="0 0 24 24" fill="none" width="36" height="36" aria-hidden="true"><circle cx="12" cy="12" r="10" stroke="currentColor" stroke-width="1.5"/><path d="M8 12l3 3 5-5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            <div>
+              <strong>Anfrage gesendet.</strong>
+              <p>Wir melden uns kurzfristig bei euch, um eure Reservierung zu bestätigen.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA BAND -->
   <section class="section cta-band" id="kontakt">
     <div class="cta-inner animate">
       <div>
@@ -365,14 +784,17 @@
     <div class="footer-col">
       <p class="footer-heading">Navigation</p>
       <p><a href="#speisekarte">Speisekarte</a></p>
+      <p><a href="#mittagsangebot">Mittagsangebot</a></p>
+      <p><a href="#konfigurator">Pizza bauen</a></p>
       <p><a href="#ueber-uns">Über uns</a></p>
       <p><a href="#galerie">Galerie</a></p>
+      <p><a href="#reservierung">Reservierung</a></p>
       <p><a href="#faq">FAQ</a></p>
     </div>
     <div class="footer-col">
       <p class="footer-heading">Kontakt</p>
       <p><a href="tel:+492113119004">+49 211 3119004</a></p>
-      <p><a href="#kontakt">Jetzt bestellen</a></p>
+      <p><a href="#reservierung">Tisch reservieren</a></p>
     </div>
   </div>
   <div class="footer-bottom">
@@ -381,6 +803,266 @@
   </div>
 </footer>
 
+<!-- SCROLL TO TOP BUTTON -->
+<button class="scroll-top" id="scrollTop" aria-label="Nach oben scrollen">
+  <svg viewBox="0 0 24 24" fill="none" width="20" height="20" aria-hidden="true">
+    <path d="M12 19V5M5 12l7-7 7 7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+  </svg>
+</button>
+
 <script src="script.js"></script>
+
+<script>
+/* ============================================================
+   Inline JS — alle neuen Interaktionen
+   script.js wird NICHT verändert
+   ============================================================ */
+
+/* --- Menü Tab-Switcher ------------------------------------ */
+(function () {
+  var tabs = document.querySelectorAll('.menu-tab');
+  var contents = document.querySelectorAll('.menu-tab-content');
+  tabs.forEach(function (tab) {
+    tab.addEventListener('click', function () {
+      var target = tab.getAttribute('data-tab');
+      tabs.forEach(function (t) { t.classList.remove('active'); });
+      contents.forEach(function (c) { c.classList.remove('active'); });
+      tab.classList.add('active');
+      var el = document.getElementById('tab-' + target);
+      if (el) el.classList.add('active');
+    });
+  });
+})();
+
+/* --- Lightbox ---------------------------------------------- */
+(function () {
+  var items = Array.from(document.querySelectorAll('.gallery-lb'));
+  var lb    = document.getElementById('lightbox');
+  var lbImg = document.getElementById('lbImg');
+  var lbCap = document.getElementById('lbCap');
+  var lbClose = document.getElementById('lbClose');
+  var lbPrev  = document.getElementById('lbPrev');
+  var lbNext  = document.getElementById('lbNext');
+  if (!lb) return;
+  var current = 0;
+  var sources = items.map(function (el) {
+    return { src: el.getAttribute('data-src') || '', cap: el.getAttribute('data-caption') || '' };
+  });
+
+  function open(idx) {
+    current = idx;
+    render();
+    lb.hidden = false;
+    document.body.style.overflow = 'hidden';
+    lbClose.focus();
+  }
+  function close() {
+    lb.hidden = true;
+    document.body.style.overflow = '';
+  }
+  function render() {
+    lbImg.src = sources[current].src;
+    lbImg.alt = sources[current].cap;
+    lbCap.textContent = sources[current].cap;
+    lbPrev.style.opacity = current === 0 ? '0.3' : '1';
+    lbNext.style.opacity = current === sources.length - 1 ? '0.3' : '1';
+    lbPrev.disabled = current === 0;
+    lbNext.disabled = current === sources.length - 1;
+  }
+
+  items.forEach(function (el, i) {
+    el.addEventListener('click', function () { open(i); });
+    el.addEventListener('keydown', function (e) { if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); open(i); } });
+  });
+  lbClose.addEventListener('click', close);
+  lbPrev.addEventListener('click', function () { if (current > 0) { current--; render(); } });
+  lbNext.addEventListener('click', function () { if (current < sources.length - 1) { current++; render(); } });
+  lb.addEventListener('click', function (e) { if (e.target === lb) close(); });
+  document.addEventListener('keydown', function (e) {
+    if (lb.hidden) return;
+    if (e.key === 'Escape') close();
+    if (e.key === 'ArrowLeft' && current > 0) { current--; render(); }
+    if (e.key === 'ArrowRight' && current < sources.length - 1) { current++; render(); }
+  });
+})();
+
+/* --- Countdown bis 14:30 Uhr ------------------------------ */
+(function () {
+  var elH = document.getElementById('cdHours');
+  var elM = document.getElementById('cdMinutes');
+  var elS = document.getElementById('cdSeconds');
+  var elNote = document.getElementById('countdownNote');
+  if (!elH) return;
+
+  function pad(n) { return n < 10 ? '0' + n : String(n); }
+
+  function tick() {
+    var now = new Date();
+    var target = new Date(now);
+    target.setHours(14, 30, 0, 0);
+    var diff = target - now;
+    var note = '';
+
+    if (diff <= 0) {
+      target.setDate(target.getDate() + 1);
+      diff = target - now;
+      note = 'Das Angebot ist heute beendet. Morgen wieder ab 12:00 Uhr.';
+    } else {
+      note = 'Heute noch verfügbar.';
+    }
+
+    var sec = Math.floor(diff / 1000);
+    elH.textContent = pad(Math.floor(sec / 3600));
+    elM.textContent = pad(Math.floor((sec % 3600) / 60));
+    elS.textContent = pad(sec % 60);
+    if (elNote) elNote.textContent = note;
+  }
+
+  tick();
+  setInterval(tick, 1000);
+})();
+
+/* --- Pizza Konfigurator ----------------------------------- */
+(function () {
+  var BASE = 7.50;
+  var sosseColors = { 'Tomatensoße': '#c0392b', 'Pesto': '#5a7a2e', 'Crème blanche': '#f0e8d8' };
+
+  function update() {
+    var teigEl  = document.querySelector('input[name="teig"]:checked');
+    var sosseEl = document.querySelector('input[name="sosse"]:checked');
+    var kaeseEl = document.querySelector('input[name="kaese"]:checked');
+    var belagEls = Array.from(document.querySelectorAll('input[name="belag"]:checked'));
+
+    var price = BASE;
+    if (teigEl)  price += parseFloat(teigEl.dataset.price)  || 0;
+    if (sosseEl) price += parseFloat(sosseEl.dataset.price) || 0;
+    if (kaeseEl) price += parseFloat(kaeseEl.dataset.price) || 0;
+    belagEls.forEach(function (el) { price += parseFloat(el.dataset.price) || 0; });
+
+    var set = function (id, val) { var el = document.getElementById(id); if (el) el.textContent = val; };
+    set('sum-teig',  teigEl  ? teigEl.value  : 'Normal');
+    set('sum-sosse', sosseEl ? sosseEl.value : 'Tomatensoße');
+    set('sum-kaese', kaeseEl ? kaeseEl.value : 'Mozzarella');
+    set('sum-belag', belagEls.length ? belagEls.map(function (e) { return e.value; }).join(', ') : 'Keine');
+    set('sum-total', price.toFixed(2).replace('.', ',') + ' €');
+
+    /* Visuelle Pizza updaten */
+    var kps = document.getElementById('kps');
+    if (kps && sosseEl) kps.style.background = sosseColors[sosseEl.value] || '#c0392b';
+
+    var kpt = document.getElementById('kpt');
+    if (kpt) {
+      kpt.innerHTML = '';
+      var positions = [[35,30],[55,25],[25,50],[60,50],[40,62],[50,40]];
+      belagEls.forEach(function (el, i) {
+        var dot = document.createElement('span');
+        dot.className = 'konfig-topping-dot';
+        var pos = positions[i % positions.length];
+        dot.style.cssText = 'left:' + pos[0] + '%;top:' + pos[1] + '%;';
+        kpt.appendChild(dot);
+      });
+    }
+  }
+
+  document.querySelectorAll('input[name="teig"],input[name="sosse"],input[name="kaese"],input[name="belag"]')
+    .forEach(function (el) { el.addEventListener('change', update); });
+  update();
+})();
+
+/* --- Ofen-Fortschrittsbalken (scroll-triggered) ----------- */
+(function () {
+  var wrap  = document.getElementById('ofenProgress');
+  var fill  = document.getElementById('ofenFill');
+  var label = document.getElementById('ofenLabel');
+  if (!wrap || !fill || !label) return;
+
+  var done = false;
+  var stages = [
+    { delay: 0,    pct: 0,   text: 'Im Ofen...' },
+    { delay: 600,  pct: 35,  text: 'Im Ofen...' },
+    { delay: 1400, pct: 70,  text: 'Fast fertig...' },
+    { delay: 2400, pct: 100, text: 'Buon Appetito!' }
+  ];
+
+  function run() {
+    if (done) return;
+    done = true;
+    stages.forEach(function (s) {
+      setTimeout(function () {
+        fill.style.width = s.pct + '%';
+        label.textContent = s.text;
+        if (s.pct === 100) fill.classList.add('done');
+      }, s.delay);
+    });
+  }
+
+  function check() {
+    var rect = wrap.getBoundingClientRect();
+    if (rect.top < window.innerHeight * 0.82) {
+      run();
+      window.removeEventListener('scroll', check);
+    }
+  }
+
+  window.addEventListener('scroll', check, { passive: true });
+  check();
+})();
+
+/* --- Scroll-to-top ---------------------------------------- */
+(function () {
+  var btn = document.getElementById('scrollTop');
+  if (!btn) return;
+  window.addEventListener('scroll', function () {
+    btn.classList.toggle('visible', window.scrollY > 500);
+  }, { passive: true });
+  btn.addEventListener('click', function () {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  });
+})();
+
+/* --- Reservierungsformular Validierung -------------------- */
+(function () {
+  var form    = document.getElementById('reservierungForm');
+  var success = document.getElementById('reservierungSuccess');
+  if (!form) return;
+
+  function showErr(id, msg) {
+    var el = document.getElementById(id);
+    if (!el) return;
+    el.textContent = msg;
+    el.style.display = msg ? 'block' : 'none';
+  }
+
+  form.addEventListener('submit', function (e) {
+    e.preventDefault();
+    var ok = true;
+
+    ['err-name','err-telefon','err-datum','err-uhrzeit','err-personen'].forEach(function (id) { showErr(id, ''); });
+
+    var name     = form.querySelector('#res-name').value.trim();
+    var telefon  = form.querySelector('#res-telefon').value.trim();
+    var datum    = form.querySelector('#res-datum').value;
+    var uhrzeit  = form.querySelector('#res-uhrzeit').value;
+    var personen = form.querySelector('#res-personen').value;
+
+    if (!name)    { showErr('err-name',    'Bitte gib deinen Namen ein.'); ok = false; }
+    if (!telefon) { showErr('err-telefon', 'Bitte gib eine Telefonnummer ein.'); ok = false; }
+    if (!datum) {
+      showErr('err-datum', 'Bitte wähle ein Datum.'); ok = false;
+    } else {
+      var today   = new Date(); today.setHours(0,0,0,0);
+      var chosen  = new Date(datum + 'T00:00:00');
+      if (chosen < today) { showErr('err-datum', 'Das Datum muss in der Zukunft liegen.'); ok = false; }
+    }
+    if (!uhrzeit)  { showErr('err-uhrzeit',  'Bitte wähle eine Uhrzeit.'); ok = false; }
+    if (!personen) { showErr('err-personen', 'Bitte wähle die Personenzahl.'); ok = false; }
+
+    if (ok) {
+      form.style.display = 'none';
+      if (success) success.hidden = false;
+    }
+  });
+})();
+</script>
 </body>
 </html>
