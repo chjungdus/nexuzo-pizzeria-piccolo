@@ -90,6 +90,50 @@ img { max-width: 100%; display: block; }
 .menu-price { color: var(--color-accent); font-weight: 700; white-space: nowrap; }
 .menu-item p { font-size: 14px; color: var(--color-muted); }
 
+/* Featured item star-burst badge */
+.menu-grid.menu-grid-visible { overflow: visible; }
+.menu-item.menu-item-featured { position: relative; padding-top: 58px; }
+.star-badge {
+  position: absolute;
+  top: -20px;
+  right: -16px;
+  width: 78px;
+  height: 78px;
+  z-index: 3;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transform: rotate(-9deg);
+  text-align: center;
+}
+.star-badge::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: #e0a95f;
+  clip-path: polygon(50% 0%, 58% 31%, 85% 15%, 69% 42%, 100% 50%, 69% 58%, 85% 85%, 58% 69%, 50% 100%, 42% 69%, 15% 85%, 31% 58%, 0% 50%, 31% 42%, 15% 15%, 42% 31%);
+}
+.star-badge-text {
+  position: relative;
+  display: block;
+  font-family: var(--font-body);
+  font-weight: 800;
+  color: var(--color-accent-dark);
+  font-size: 9.5px;
+  line-height: 1.25;
+  letter-spacing: 0.01em;
+  text-transform: uppercase;
+  padding: 0 8px;
+}
+
+/* Torn paper divider */
+.torn-divider {
+  height: 56px;
+  background: var(--color-accent-dark);
+  clip-path: polygon(0% 45%, 3% 15%, 6% 55%, 9% 20%, 12% 60%, 15% 10%, 18% 50%, 21% 25%, 24% 65%, 27% 15%, 30% 45%, 33% 20%, 36% 60%, 39% 10%, 42% 50%, 45% 25%, 48% 65%, 51% 15%, 54% 45%, 57% 20%, 60% 60%, 63% 10%, 66% 50%, 69% 25%, 72% 65%, 75% 15%, 78% 45%, 81% 20%, 84% 60%, 87% 10%, 90% 50%, 93% 25%, 96% 65%, 100% 20%, 100% 100%, 0% 100%);
+  filter: drop-shadow(0 -3px 3px rgba(43, 33, 28, 0.14));
+}
+
 /* Order steps */
 .order-steps { background: var(--color-accent-dark); }
 .order-steps-inner { max-width: 1140px; margin: 0 auto; padding: 96px 24px; text-align: center; }
@@ -200,6 +244,10 @@ blockquote cite { display: block; margin-top: 16px; font-family: var(--font-body
   .why-grid { grid-template-columns: repeat(2, 1fr); gap: 26px; }
   .gallery-grid { grid-template-columns: repeat(2, 1fr); }
   .review-grid { grid-template-columns: 1fr; }
+  .torn-divider { height: 38px; }
+  .menu-item.menu-item-featured { padding-top: 50px; }
+  .star-badge { width: 64px; height: 64px; top: -16px; right: -12px; }
+  .star-badge-text { font-size: 8px; }
   .cta-inner { flex-direction: column; align-items: flex-start; text-align: left; }
   .cta-actions { align-items: flex-start; }
   .footer-inner { grid-template-columns: 1fr; gap: 30px; }
