@@ -64,7 +64,7 @@ img { max-width: 100%; display: block; }
    HERO
    ======================== */
 .hero { position: relative; height: 86vh; min-height: 560px; max-height: 760px; display: flex; align-items: flex-end; overflow: hidden; }
-.hero-bg { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
+.hero-bg { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; object-position: 50% 58%; }
 .hero-overlay { position: absolute; inset: 0; background: linear-gradient(180deg, rgba(43,33,28,0.55) 0%, rgba(43,33,28,0.35) 40%, rgba(43,33,28,0.85) 100%); }
 .hero.img-fallback .hero-bg { display: none; }
 .hero.img-fallback { background: linear-gradient(155deg, #4a2620 0%, #7a1f2b 55%, #3d1a14 100%); }
@@ -184,6 +184,21 @@ img { max-width: 100%; display: block; }
 .menu-item-head span:first-child { font-family: var(--font-head); font-weight: 600; font-size: 18px; }
 .menu-price { color: var(--color-accent); font-weight: 700; white-space: nowrap; }
 .menu-item p { font-size: 14px; color: var(--color-muted); }
+
+/* Gerichte mit Foto */
+.menu-item-photo-card { display: flex; flex-direction: column; gap: 16px; }
+.menu-item-photo {
+  width: 150px; height: 150px; margin: -4px auto 0;
+  object-fit: cover; border-radius: 50%;
+  mix-blend-mode: multiply; /* weißer Fotohintergrund verschmilzt mit der Karte */
+  transition: transform 0.35s ease;
+}
+.menu-item-photo-card:hover .menu-item-photo { transform: scale(1.06) rotate(-3deg); }
+.menu-item-body { width: 100%; }
+
+/* Freigestellte Speisefotos (weißer Hintergrund) */
+.img-dish { mix-blend-mode: multiply; }
+.feature-media .img-dish { object-fit: contain; padding: 6%; }
 
 /* Star badge */
 .menu-grid.menu-grid-visible { overflow: visible; }
@@ -884,6 +899,8 @@ a.res-contact-value:hover { color: var(--color-accent); }
   .hero-content h1 { font-size: 38px; }
   .usp-inner { grid-template-columns: 1fr; gap: 24px; }
   .menu-grid { grid-template-columns: 1fr; }
+  .menu-item-photo-card { flex-direction: row; align-items: center; }
+  .menu-item-photo { width: 96px; height: 96px; margin: 0; }
   .steps-row { grid-template-columns: 1fr; gap: 20px; }
   .mittagsangebot-inner { grid-template-columns: 1fr; gap: 48px; }
   .mittagsangebot-countdown { padding: 40px 28px; }

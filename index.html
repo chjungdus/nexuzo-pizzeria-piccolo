@@ -35,8 +35,7 @@
 
   <!-- HERO -->
   <section class="hero">
-    <!-- BILD ERSETZEN: Foto vom gemütlichen Innenraum mit Backsteinwand und Holztischen (Empfehlung: 1920x1200px) -->
-    <img class="hero-bg" src="images/hero.jpg" alt="Gemütlicher Innenraum der Pizzeria Piccolo" onerror="this.parentElement.classList.add('img-fallback')">
+    <img class="hero-bg" src="images/piccolo-aussen-abends.jpg" alt="Die Pizzeria Piccolo am Abend: beleuchteter Eingang mit Holzbänken vor der Tür" fetchpriority="high" onerror="this.parentElement.classList.add('img-fallback')">
     <div class="hero-overlay"></div>
     <div class="hero-content">
       <p class="eyebrow eyebrow-invert">Friedrichstraße, Düsseldorf</p>
@@ -94,6 +93,8 @@
     <div class="menu-tabs animate">
       <button class="menu-tab active" data-tab="classica">Pizza Classica</button>
       <button class="menu-tab" data-tab="speciale">Pizza Speciale</button>
+      <button class="menu-tab" data-tab="pasta">Pasta</button>
+      <button class="menu-tab" data-tab="salate">Salate</button>
       <button class="menu-tab" data-tab="antipasti">Antipasti</button>
       <button class="menu-tab" data-tab="dolci">Dolci</button>
       <button class="menu-tab" data-tab="getraenke">Getränke</button>
@@ -131,6 +132,20 @@
 
     <div class="menu-tab-content" id="tab-speciale">
       <div class="menu-grid">
+        <div class="menu-item menu-item-photo-card">
+          <img class="menu-item-photo" src="images/pizza-gamberetti.jpg" alt="Pizza Gamberetti mit Garnelen, Oliven, Rucola und Basilikum" loading="lazy" width="120" height="120">
+          <div class="menu-item-body">
+            <div class="menu-item-head"><span>Gamberetti</span><span class="menu-price">11,50 €</span></div>
+            <p>Tomate, Mozzarella, Garnelen, schwarze Oliven, Rucola, Basilikum</p>
+          </div>
+        </div>
+        <div class="menu-item menu-item-photo-card">
+          <img class="menu-item-photo" src="images/calzone.jpg" alt="Calzone, goldbraun gebacken mit Tomate und Basilikum" loading="lazy" width="120" height="120">
+          <div class="menu-item-body">
+            <div class="menu-item-head"><span>Calzone</span><span class="menu-price">10,00 €</span></div>
+            <p>Gefüllte, zusammengeklappte Pizza mit Schinken, Champignons und Mozzarella</p>
+          </div>
+        </div>
         <div class="menu-item">
           <div class="menu-item-head"><span>Quattro Formaggi</span><span class="menu-price">9,50 €</span></div>
           <p>Vier Käsesorten, kein Tomatensugo</p>
@@ -150,6 +165,64 @@
         <div class="menu-item">
           <div class="menu-item-head"><span>Tartufo</span><span class="menu-price">12,00 €</span></div>
           <p>Crème blanche, Mozzarella, Trüffelöl, Parmesan</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="menu-tab-content" id="tab-pasta">
+      <div class="menu-grid">
+        <div class="menu-item menu-item-photo-card">
+          <img class="menu-item-photo" src="images/spaghetti-bolognese.jpg" alt="Spaghetti Bolognese mit Basilikum" loading="lazy" width="120" height="120">
+          <div class="menu-item-body">
+            <div class="menu-item-head"><span>Spaghetti Bolognese</span><span class="menu-price">9,00 €</span></div>
+            <p>Hausgemachte Fleischsauce aus Rinderhack und Tomaten</p>
+          </div>
+        </div>
+        <div class="menu-item menu-item-photo-card">
+          <img class="menu-item-photo" src="images/spaghetti-broccoli.jpg" alt="Spaghetti mit Brokkoli, Knoblauch, Tomaten und Parmesan" loading="lazy" width="120" height="120">
+          <div class="menu-item-body">
+            <div class="menu-item-head"><span>Spaghetti Broccoli</span><span class="menu-price">9,00 €</span></div>
+            <p>Brokkoli, Knoblauch, Olivenöl, Kirschtomaten, Parmesan</p>
+          </div>
+        </div>
+        <div class="menu-item">
+          <div class="menu-item-head"><span>Spaghetti Napoli</span><span class="menu-price">7,50 €</span></div>
+          <p>Tomatensauce, Basilikum, Parmesan</p>
+        </div>
+        <div class="menu-item">
+          <div class="menu-item-head"><span>Penne all'Arrabbiata</span><span class="menu-price">8,00 €</span></div>
+          <p>Scharfe Tomatensauce mit Knoblauch und Peperoncino</p>
+        </div>
+        <div class="menu-item">
+          <div class="menu-item-head"><span>Tagliatelle alla Panna</span><span class="menu-price">9,00 €</span></div>
+          <p>Sahnesauce, Kochschinken, Champignons</p>
+        </div>
+        <div class="menu-item">
+          <div class="menu-item-head"><span>Lasagne al Forno</span><span class="menu-price">9,50 €</span></div>
+          <p>Überbacken mit Bolognese, Béchamel und Mozzarella</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="menu-tab-content" id="tab-salate">
+      <div class="menu-grid">
+        <div class="menu-item menu-item-photo-card">
+          <img class="menu-item-photo" src="images/insalata-della-casa.jpg" alt="Salat della Casa mit Schinken, Ei, Tomaten, Gurke und Mais" loading="lazy" width="120" height="120">
+          <div class="menu-item-body">
+            <div class="menu-item-head"><span>Insalata della Casa</span><span class="menu-price">8,50 €</span></div>
+            <p>Blattsalate, Kochschinken, Ei, Käse, Tomaten, Gurke, Mais, Karotten</p>
+          </div>
+        </div>
+        <div class="menu-item menu-item-photo-card">
+          <img class="menu-item-photo" src="images/insalata-rucola.jpg" alt="Rucolasalat mit Kirschtomaten, Radicchio, Feta und Kernen" loading="lazy" width="120" height="120">
+          <div class="menu-item-body">
+            <div class="menu-item-head"><span>Insalata Rucola</span><span class="menu-price">8,50 €</span></div>
+            <p>Rucola, Radicchio, Kirschtomaten, Feta, geröstete Kerne</p>
+          </div>
+        </div>
+        <div class="menu-item">
+          <div class="menu-item-head"><span>Insalata Tonno</span><span class="menu-price">8,50 €</span></div>
+          <p>Gemischter Salat mit Thunfisch, Zwiebeln und Oliven</p>
         </div>
       </div>
     </div>
@@ -308,8 +381,7 @@
 
     <div class="feature-row feature-row-normal animate">
       <div class="feature-media">
-        <!-- BILD ERSETZEN: Foto des Teigformens von Hand (Empfehlung: 800x600px) -->
-        <img src="images/feature-1.jpg" alt="Handgemachter Pizzateig bei Piccolo" loading="lazy" onerror="this.parentElement.classList.add('img-fallback')">
+        <img class="img-dish" src="images/calzone.jpg" alt="Calzone mit knusprigem, handgeformtem Teig" loading="lazy" onerror="this.parentElement.classList.add('img-fallback')">
       </div>
       <div class="feature-text">
         <span class="feature-num" aria-hidden="true">01</span>
@@ -321,8 +393,7 @@
 
     <div class="feature-row feature-row-reverse animate">
       <div class="feature-media">
-        <!-- BILD ERSETZEN: Foto frischer Zutaten (Tomaten, Basilikum, Käse) (Empfehlung: 800x600px) -->
-        <img src="images/feature-2.jpg" alt="Frische Zutaten bei Pizzeria Piccolo" loading="lazy" onerror="this.parentElement.classList.add('img-fallback')">
+        <img class="img-dish" src="images/insalata-rucola.jpg" alt="Frischer Rucolasalat mit Kirschtomaten und Feta" loading="lazy" onerror="this.parentElement.classList.add('img-fallback')">
       </div>
       <div class="feature-text">
         <span class="feature-num" aria-hidden="true">02</span>
@@ -334,8 +405,7 @@
 
     <div class="feature-row feature-row-normal animate">
       <div class="feature-media">
-        <!-- BILD ERSETZEN: Foto des gemütlichen Innenraums mit Backsteinwand (Empfehlung: 800x600px) -->
-        <img src="images/feature-3.jpg" alt="Gemütlicher Innenraum der Pizzeria Piccolo" loading="lazy" onerror="this.parentElement.classList.add('img-fallback')">
+        <img src="images/piccolo-innenraum.jpg" alt="Gastraum der Pizzeria Piccolo mit Steinwand, Stehtischen und Speisetafeln" loading="lazy" onerror="this.parentElement.classList.add('img-fallback')">
       </div>
       <div class="feature-text">
         <span class="feature-num" aria-hidden="true">03</span>
@@ -347,8 +417,7 @@
 
     <div class="feature-row feature-row-reverse animate">
       <div class="feature-media">
-        <!-- BILD ERSETZEN: Foto des Holzofens mit lodernden Flammen (Empfehlung: 800x600px) -->
-        <img src="images/feature-4.jpg" alt="Holzofen in der Pizzeria Piccolo" loading="lazy" onerror="this.parentElement.classList.add('img-fallback')">
+        <img class="img-dish" src="images/pizza-gamberetti.jpg" alt="Pizza Gamberetti frisch aus dem Ofen" loading="lazy" onerror="this.parentElement.classList.add('img-fallback')">
       </div>
       <div class="feature-text">
         <span class="feature-num" aria-hidden="true">04</span>
@@ -543,34 +612,28 @@
       <h2>Ein Blick ins Piccolo</h2>
     </div>
     <div class="gallery-grid animate">
-      <div class="gallery-item gallery-item-round gallery-lb" data-src="images/gallery-1.jpg" data-caption="Frisch gebackene Pizza bei Pizzeria Piccolo" tabindex="0" role="button" aria-label="Bild vergrößern">
-        <!-- BILD ERSETZEN: Foto einer Pizza, rund zugeschnitten (Empfehlung: 600x600px) -->
-        <img src="images/gallery-1.jpg" alt="Frisch gebackene Pizza bei Pizzeria Piccolo" loading="lazy" onerror="this.parentElement.classList.add('img-fallback')">
+      <div class="gallery-item gallery-item-round gallery-lb" data-src="images/pizza-gamberetti.jpg" data-caption="Pizza Gamberetti mit Garnelen und Rucola" tabindex="0" role="button" aria-label="Bild vergrößern">
+        <img class="img-dish" src="images/pizza-gamberetti.jpg" alt="Pizza Gamberetti mit Garnelen und Rucola" loading="lazy" onerror="this.parentElement.classList.add('img-fallback')">
         <span class="gallery-zoom" aria-hidden="true">&#x2B;</span>
       </div>
-      <div class="gallery-item gallery-lb" data-src="images/gallery-2.jpg" data-caption="Innenraum der Pizzeria Piccolo" tabindex="0" role="button" aria-label="Bild vergrößern">
-        <!-- BILD ERSETZEN: Foto vom Innenraum mit Backsteinwand (Empfehlung: 800x600px) -->
-        <img src="images/gallery-2.jpg" alt="Innenraum der Pizzeria Piccolo" loading="lazy" onerror="this.parentElement.classList.add('img-fallback')">
+      <div class="gallery-item gallery-lb" data-src="images/piccolo-innenraum.jpg" data-caption="Innenraum der Pizzeria Piccolo" tabindex="0" role="button" aria-label="Bild vergrößern">
+        <img src="images/piccolo-innenraum.jpg" alt="Innenraum der Pizzeria Piccolo" loading="lazy" onerror="this.parentElement.classList.add('img-fallback')">
         <span class="gallery-zoom" aria-hidden="true">&#x2B;</span>
       </div>
-      <div class="gallery-item gallery-item-round gallery-lb" data-src="images/gallery-3.jpg" data-caption="Zubereitung bei Pizzeria Piccolo" tabindex="0" role="button" aria-label="Bild vergrößern">
-        <!-- BILD ERSETZEN: Foto von Ofen oder Zutaten, rund (Empfehlung: 600x600px) -->
-        <img src="images/gallery-3.jpg" alt="Zubereitung bei Pizzeria Piccolo" loading="lazy" onerror="this.parentElement.classList.add('img-fallback')">
+      <div class="gallery-item gallery-item-round gallery-lb" data-src="images/spaghetti-bolognese.jpg" data-caption="Spaghetti Bolognese" tabindex="0" role="button" aria-label="Bild vergrößern">
+        <img class="img-dish" src="images/spaghetti-bolognese.jpg" alt="Spaghetti Bolognese" loading="lazy" onerror="this.parentElement.classList.add('img-fallback')">
         <span class="gallery-zoom" aria-hidden="true">&#x2B;</span>
       </div>
-      <div class="gallery-item gallery-lb" data-src="images/gallery-4.jpg" data-caption="Sitzbereich der Pizzeria Piccolo" tabindex="0" role="button" aria-label="Bild vergrößern">
-        <!-- BILD ERSETZEN: Foto von Holztischen und Stühlen (Empfehlung: 800x600px) -->
-        <img src="images/gallery-4.jpg" alt="Sitzbereich der Pizzeria Piccolo" loading="lazy" onerror="this.parentElement.classList.add('img-fallback')">
+      <div class="gallery-item gallery-lb" data-src="images/piccolo-schaufenster.jpg" data-caption="Das Schaufenster der Pizzeria Piccolo: Pizza, Salate, Nudeln" tabindex="0" role="button" aria-label="Bild vergrößern">
+        <img src="images/piccolo-schaufenster.jpg" alt="Das Schaufenster der Pizzeria Piccolo: Pizza, Salate, Nudeln" loading="lazy" onerror="this.parentElement.classList.add('img-fallback')">
         <span class="gallery-zoom" aria-hidden="true">&#x2B;</span>
       </div>
-      <div class="gallery-item gallery-lb" data-src="images/gallery-5.jpg" data-caption="Der Holzofen der Pizzeria Piccolo" tabindex="0" role="button" aria-label="Bild vergrößern">
-        <!-- BILD ERSETZEN: Foto des Holzofens (Empfehlung: 800x600px) -->
-        <img src="images/gallery-5.jpg" alt="Der Holzofen der Pizzeria Piccolo" loading="lazy" onerror="this.parentElement.classList.add('img-fallback')">
+      <div class="gallery-item gallery-lb" data-src="images/piccolo-aussen-abends.jpg" data-caption="Pizzeria Piccolo am Abend" tabindex="0" role="button" aria-label="Bild vergrößern">
+        <img src="images/piccolo-aussen-abends.jpg" alt="Pizzeria Piccolo am Abend" loading="lazy" onerror="this.parentElement.classList.add('img-fallback')">
         <span class="gallery-zoom" aria-hidden="true">&#x2B;</span>
       </div>
-      <div class="gallery-item gallery-item-round gallery-lb" data-src="images/gallery-6.jpg" data-caption="Frische Zutaten bei Piccolo" tabindex="0" role="button" aria-label="Bild vergrößern">
-        <!-- BILD ERSETZEN: Foto frischer Zutaten, rund (Empfehlung: 600x600px) -->
-        <img src="images/gallery-6.jpg" alt="Frische Zutaten bei Piccolo" loading="lazy" onerror="this.parentElement.classList.add('img-fallback')">
+      <div class="gallery-item gallery-item-round gallery-lb" data-src="images/insalata-rucola.jpg" data-caption="Insalata Rucola mit frischen Zutaten" tabindex="0" role="button" aria-label="Bild vergrößern">
+        <img class="img-dish" src="images/insalata-rucola.jpg" alt="Insalata Rucola mit frischen Zutaten" loading="lazy" onerror="this.parentElement.classList.add('img-fallback')">
         <span class="gallery-zoom" aria-hidden="true">&#x2B;</span>
       </div>
     </div>
